@@ -24,13 +24,51 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h1 class="major">Bridge</h1>
+							<p>The "Bridge" pattern is like a two-level system, or a bridge, for organizing a program's code. It helps separate what an object does from how it does it, allowing both to change without causing issues with each other.</p>
+							<span class="image fit"><img src="images/bridge.png" alt="bridge" /></span>
+							<h2>Imagine This:</h2>
+							<h3>1. Separation of Responsibilities:</h3>
+							<p>
+							  <span>What the object does</span> (abstraction): The main function, like drawing shapes.<br>
+							  <span>How the object does it</span> (implementation): The specific method, such as drawing on a computer screen.
+							</p>
+							<h3>2. Avoiding Excessive Subclasses:</h3>
+							<p>
+							  Without the <span>"Bridge"</span> pattern, if you have different combinations of shapes and platforms (like Windows and macOS), you would end up creating a new class for each possible combination, which can become confusing and complicated.
+							</p>
+							<h3>3. Applying the "Bridge":</h3>
+							<p>
+							  The pattern separates responsibilities into two distinct hierarchies:
+							</p>
+							<ul>
+							  <li><span>Shapes</span> (circles, squares).</li>
+							  <li><span>Implementations</span> (Windows, macOS).</li>
+							</ul>
+							<p>
+							  These hierarchies are connected through a <span>"bridge"</span> that allows you to combine shapes and implementations without creating a class for each combination.
+							</p>
+							<h3>Simple Example:</h3>
+							<p>
+							  <span>Without "Bridge":</span>
+							</p>
+							<ul>
+							  <li>You would have classes like <span>`CircleOnWindows`</span>, <span>`CircleOnMac`</span>, <span>`SquareOnWindows`</span>, <span>`SquareOnMac`</span>, and so on.</li>
+							</ul>
+							<p>
+							  <span>With "Bridge":</span>
+							</p>
+							<ul>
+							  <li>Create a hierarchy for shapes: <span>`Circle`</span>, <span>`Square`</span>.</li>
+							  <li>Create a hierarchy for platforms: <span>`WindowsRenderer`</span>, <span>`MacRenderer`</span>.</li>
+							  <li>Use a <span>"Bridge"</span> class to connect these two hierarchies, such as <span>`ShapeRenderer`</span>, which can draw any shape on any platform.</li>
+							</ul>
+							<h3>Benefit:</h3>
+							<p>
+							  In summary, the <span>"Bridge"</span> pattern organizes the code so that you can modify or add new features without creating a mess of classes and subclasses.
+							</p>							
 						</div>
 					</section>
-
 			</div>
 
 		<!-- Footer -->
